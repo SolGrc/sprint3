@@ -2,7 +2,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ProvideAuth as AuthProvider } from "@/helpers/auth-provider";
-import Header from '@/componentes/header/Header';
 import Footer from '@/componentes/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,9 +12,7 @@ export default function RootLayout({ children }) {
   return (<>
     <html lang="en" suppressHydrationWarning>
         <body>
-        <Header/>
             <AuthProvider>
-            
                 <div className="pagPrincipal">
                   {children}
                 </div>

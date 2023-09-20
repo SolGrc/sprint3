@@ -1,10 +1,12 @@
-
-
 "use client"
 import React, { useState } from 'react';
 import './Login.css';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/helpers/auth-provider';
 
 function LoginForm({ setUser }) {
+  const router=useRouter()
+  const auth = useAuth()
   const [documento, setDocumento] = useState('');
   const [numeroDNI, setNumeroDNI] = useState('');
   const [usuario, setUsuario] = useState('');
@@ -39,7 +41,9 @@ function LoginForm({ setUser }) {
 
     // Aquí puedes enviar los datos al servidor o realizar cualquier acción necesaria
     // Luego, puedes actualizar el estado de usuario para indicar que el usuario ha iniciado sesión
+    auth.login(usuario,contraseña)
     setUser([usuario]);/* aquí puedes poner los datos del usuario */
+    router.push('/home')
   };
 
   return (

@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import './Card.css';
-import { Icon } from '../Icon';
 
 const Card=({title,text,img})=> {
     return (

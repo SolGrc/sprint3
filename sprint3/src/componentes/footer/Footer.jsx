@@ -28,32 +28,26 @@ const Footer=()=> {
                 </div>
                 
             </div>
-            <div class="containerLinks">
-                <h4>Información</h4>
-                <ul>
-                    <li><a href="index.html" title="inicio">Home</a></li>
-                    <li><a href="cuentas.html" title="cuentas">Cuentas</a></li>
-                    <li><a href="prestamos.html" title="prestamos">Prestamos</a></li>
-                    <li><a href="transferencias.html" title="transferencias">Transferencias</a></li>
-                </ul>
-            </div>
             
         </div>
         <div class="containerSocials">
             <div class="social">
                 <Icon 
+                    onClick={()=>{window.open("https://www.facebook.com")}}
                     className='Icon' 
                     type={"facebook"} 
                 /> 
             </div>
             <div class="social">
                 <Icon 
+                    onClick={()=>{window.open("https://www.instagram.com")}}
                     className='Icon' 
                     type={"instagram"} 
                 /> 
             </div>
             <div class="social">
                 <Icon 
+                    onClick={()=>{window.open("https://www.twitter.com")}}
                     className='Icon' 
                     type={"twitter"} 
                 /> 

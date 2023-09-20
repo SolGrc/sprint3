@@ -28,10 +28,10 @@
 .containerInfoGral{
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 60%;
+    padding: 2rem;
     justify-content: space-between;
-    gap: 3rem;
-
+    gap: 1rem;
 }
 .itemInfo{
     display: flex;
@@ -42,32 +42,6 @@
 .itemInfo h4{
     font-size: 19px;
     align-self: right;
-}
-.containerLinks{
-    width: 25%;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 1rem;
-}
-.containerLinks h4{
-    font-size: 19px;
-}
-.containerLinks ul{
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-}
-.containerLinks ul li {
-    list-style: none;
-}
-.containerLinks ul li a{
-    text-decoration: none;
-    color: black;
-}
-.containerLinks ul li a:hover{
-    color: white;
 }
 .containerSocials{
     width: 100%;
@@ -83,11 +57,6 @@
 @media(max-width: 910px){
     .containerFooter{
         flex-direction: column;
-    }
-    .containerLinks{
-        width: 88%;
-        display: flex;
-        justify-content: center
     }
     .containerInfoGral{
         width: 100%;

@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import './Header.css';
 import { Icon } from '../Icon';
 import Navbar from '../navbar/Navbar.jsx';
+import { useAuth } from '@/helpers/auth-provider';
 
 function Header({showNavbar=true}) {
+    const auth = useAuth()
     const [showNav, setshownav] = useState(false)
     const changeState =()=>{
         if (showNav==true){ 
@@ -13,7 +15,6 @@ function Header({showNavbar=true}) {
         else {
             setshownav(true)
         }
-        console.log("hola")
     }
     return (
     <header>
@@ -22,13 +23,16 @@ function Header({showNavbar=true}) {
                 <img class="logo-1" src="./fotos/itbank.png"  alt=""></img>
             </div>
             {
-                showNavbar&&(<div className='containerIcon' onClick={changeState}>
-                <Icon className='Icon' type={"bar"} /> 
+                auth.user&&(
+                <div 
+                    className='containerIcon' 
+                    onClick={changeState}>
+                        <Icon className='Icon' type={"bar"} /> 
             </div>)
             }
         </div>
         {
-            showNavbar&&(<div className='navBar'>
+            auth.user&&(<div className='navBar'>
             {
                 showNav ? (<Navbar/>):null
             }
